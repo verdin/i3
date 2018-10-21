@@ -4,6 +4,14 @@ Where to learn more:
 
 [i3 website](https://i3wm.org)
 
+I also installed:
+
++ feh
+
++ rofi
+
++ Font Awesome
+
 Excellent quick start:
 
 __1__
