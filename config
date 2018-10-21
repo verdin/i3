@@ -174,7 +174,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-scale --slideshow-delay 60 /home/core/Pictures/Wallpaper/*.jpg
+exec_always feh --bg-scale -z --slideshow-delay 6.0 /home/core/Pictures/Wallpaper/*.jpg
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
