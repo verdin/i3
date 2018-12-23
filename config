@@ -29,6 +29,34 @@ font pango:System San Francisco Display 7.6
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#setting colors backup
+# class                 border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#
+# client.background       #ffffff
+
+# setting colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #557728 #557728 #ffffff #557728   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+# set windows border 
+# 0 is the same as default_border none 
+# default_border pixel 5
+
+# The "smart" setting hides borders on workspaces with only one window visible,
+# but keeps them on workspaces with multiple windows visible
+# hide_edge_borders smart  #none|vertical|horizontal|both|smart
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
