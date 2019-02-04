@@ -177,6 +177,10 @@ bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff sho
 
 # lock screen
 bindsym $mod+Shift+x exec i3lock --color 475263
+
+# time lock
+exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263" &
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
