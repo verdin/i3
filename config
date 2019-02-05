@@ -220,7 +220,7 @@ exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.jpg
 exec xrandr --output eDP-1 --brightness .7
 
 # redshift bluelight reducer config in .config/redshift.conf
-exec redshift
+exec --no-startup-id redshift &
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
