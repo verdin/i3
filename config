@@ -41,7 +41,7 @@ floating_modifier $mod
 
 # setting colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #557728 #557728 #ffffff #557728   #285577
+client.focused          #557728 #557728 #ffffff #557728   #00cc00
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -212,6 +212,17 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	colors {
+        	background #737373
+        	statusline #ffffff
+        	separator #666666
+
+        	focused_workspace  #00cc00 #0033cc #ffffff
+        	active_workspace   #333333 #5f676a #ffffff
+        	inactive_workspace #333333 #222222 #b3b3b3
+        	urgent_workspace   #2f343a #900000 #ffffff
+        	binding_mode       #2f343a #900000 #ffffff
+    	}
 }
 
 # wallpaper
