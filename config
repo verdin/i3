@@ -180,7 +180,7 @@ bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff sho
 bindsym $mod+Shift+x exec i3lock --color 475263
 
 # time lock
-exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263 -i ~/Pictures/blue-screen-of-death.png" &
+exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263" &
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -226,7 +226,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.*
+exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.jpg
 
 # brightness dimer
 exec xrandr --output eDP-1 --brightness .7
@@ -251,10 +251,3 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous 
-
-# GNOME nice things
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-
-exec_always --no-startup-id gnome-power-manager
-
-exec --no-startup-id gnome-flashback
