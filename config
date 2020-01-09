@@ -174,7 +174,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # poweroff i3 (powers down the computer)
-bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff shortcut. The computer will shutdown in 60 seconds. Do you really want to poweroff?' -b 'No, do not poweroff' 'sudo /sbin/shutdown -c'  -b 'Reboot' 'sudo /sbin/shutdown -r +0' -b 'Yes, poweroff' 'sudo /sbin/shutdown +0'"
+bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff shortcut. The computer will shutdown in 60 seconds. Do you really want to poweroff?' -b 'No, do not poweroff' 'sudo /sbin/shutdown -c' -b 'Logout' 'i3-msg exit' -b 'Reboot' 'sudo /sbin/shutdown -r +0' -b 'Yes, poweroff' 'sudo /sbin/shutdown +0'"
 
 # lock screen
 bindsym $mod+Shift+x exec i3lock --color 475263
@@ -257,8 +257,11 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous 
 
 # GNOME nice things
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
-exec_always --no-startup-id gnome-power-manager
+#exec_always --no-startup-id gnome-power-manager
 
-exec --no-startup-id gnome-flashback
+#exec --no-startup-id gnome-flashback
+
+# xfce nice things
+exec --no-startup-id xfsettingsd --sm-client-disable &
