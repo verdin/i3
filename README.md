@@ -12,6 +12,8 @@ I also installed:
 
 + Font Awesome
 
++ xautolock
+
 Excellent quick start:
 
 __1__

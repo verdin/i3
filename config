@@ -165,6 +165,7 @@ assign [class="Firefox"] $workspace2
 assign [class="Vmware"] $workspace3
 assign [class="discord"] $workspace6
 assign [class="Signal"] $workspace5
+assign [class="Slack"] $workspace5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -181,6 +182,9 @@ bindsym $mod+Shift+x exec i3lock --color 475263
 
 # time lock
 exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263 -i ~/Pictures/blue-screen-of-death.png" &
+
+# startup script
+exec --no-startup-id ~/.config/i3/start.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
