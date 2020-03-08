@@ -183,8 +183,8 @@ bindsym $mod+Shift+x exec i3lock --color 475263
 # time lock
 exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263" &
 
-# startup script
-exec --no-startup-id ~/.config/i3/start.sh
+# startup script 
+#exec --no-startup-id ~/.config/i3/start.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
