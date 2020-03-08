@@ -237,7 +237,8 @@ bar {
 exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.png
 
 # brightness dimer
-exec xrandr --output eDP-1 --brightness .7
+#exec xrandr --output eDP-1 --brightness .7
+exec xrandr --output DP-2-1 --primary
 
 # redshift bluelight reducer config in .config/redshift.conf
 exec --no-startup-id redshift &
@@ -268,4 +269,4 @@ bindsym XF86AudioPrev exec playerctl previous
 #exec --no-startup-id gnome-flashback
 
 # xfce nice things
-exec --no-startup-id xfsettingsd --sm-client-disable &
+#exec --no-startup-id xfsettingsd --sm-client-disable &
