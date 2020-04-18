@@ -234,7 +234,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.png
+exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.jpg
 
 # brightness dimer
 #exec xrandr --output eDP-1 --brightness .7
@@ -270,3 +270,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # xfce nice things
 #exec --no-startup-id xfsettingsd --sm-client-disable &
+
+
+#flameshot
+#exec --no-startup-id flameshot
