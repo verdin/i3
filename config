@@ -165,8 +165,9 @@ assign [class="Firefox"] $workspace2
 assign [class="Vmware"] $workspace3
 assign [class="discord"] $workspace6
 assign [class="Signal"] $workspace5
-assign [class="Thunderbird"] $workspace5
+#assign [class="Thunderbird"] $workspace7
 assign [class="Slack"] $workspace5
+assign [class="Chromium"] $workspace1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -179,10 +180,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff shortcut. The computer will shutdown in 60 seconds. Do you really want to poweroff?' -b 'No, do not poweroff' 'sudo /sbin/shutdown -c' -b 'Logout' 'i3-msg exit' -b 'Reboot' 'sudo /sbin/shutdown -r +0' -b 'Yes, poweroff' 'sudo /sbin/shutdown +0'"
 
 # lock screen
-bindsym $mod+Shift+x exec i3lock --color 475263
+bindsym $mod+Shift+x exec bash -c 'ls ~/Pictures/lockscreen/ | shuf | tail -n 1 | xargs -I _ i3lock -i ~/Pictures/lockscreen/_ -c 48ad05 -t -e -f'
 
 # time lock
-exec --no-startup-id xautolock -time 9 -locker "i3lock --color 475263" &
+exec --no-startup-id xautolock -time 9 -locker "ls ~/Pictures/lockscreen/ | shuf | tail -n 1 | xargs -I _ i3lock -i _ -c 48ad05 -t -e -f" &
 
 # startup script
 exec --no-startup-id ~/.config/i3/start.sh
@@ -235,7 +236,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.png
+exec_always feh --bg-scale -z --slideshow-delay 6.0 ~/Pictures/Wallpaper/*.*
 
 # brightness dimer
 exec xrandr --output eDP-1 --brightness .7
