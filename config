@@ -183,7 +183,7 @@ bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the poweroff sho
 bindsym $mod+Shift+x exec bash -c 'ls ~/Pictures/lockscreen/ | shuf | tail -n 1 | xargs -I _ i3lock -i ~/Pictures/lockscreen/_ -c 48ad05 -t -e -f'
 
 # time lock
-exec --no-startup-id xautolock -time 9 -locker "ls ~/Pictures/lockscreen/ | shuf | tail -n 1 | xargs -I _ i3lock -i _ -c 48ad05 -t -e -f" &
+exec --no-startup-id xautolock -time 12 -locker "bash -c 'ls ~/Pictures/lockscreen/ | shuf | tail -n 1 | xargs -I _ i3lock -i ~/Pictures/lockscreen/_ -c 48ad05 -t -e -f'" &
 
 # startup script
 exec --no-startup-id ~/.config/i3/start.sh
