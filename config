@@ -271,3 +271,12 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # xfce nice things
 exec --no-startup-id xfsettingsd --sm-client-disable &
+
+# battery warning https://github.com/rjekker/i3-battery-popup
+exec --no-startup-id i3-battery-popup
+
+#change xrandr monitor config on hotkeys
+#for laptop one display
+bindsym $mod+Ctrl+1 exec ~/.config/i3/1displaySetup.sh
+#for work monitor 3 display setup
+bindsym $mod+Ctrl+3 exec ~/.config/i3/3displaySetup.sh
