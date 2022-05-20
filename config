@@ -276,7 +276,7 @@ exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id i3-battery-popup
 
 #change xrandr monitor config on hotkeys
-#for laptop one display used GUI program for xrandr "sudo apt-get install ARandR" to create scripts
+#for laptop one display used GUI program for xrandr "sudo apt-get install arandr" to create scripts
 bindsym $mod+Ctrl+1 exec ~/.config/i3/1displaySetup.sh
 #for work monitor 3 display setup
 bindsym $mod+Ctrl+3 exec ~/.config/i3/3displaySetup.sh
